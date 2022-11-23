@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NameGame</title>
+    <link rel="icon" href="./img/fav2.png">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="./css/myMenuStyle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--Three JS-->
+    <script src="./vendors/three.js-master/build/three.min.js"></script>
+    <script src="./vendors/controls/OrbitControls.js"></script>
+
+    <script src="./vendors/load/OBJLoader.js"></script>
+    <script src="./vendors/load/MTLLoader.js"></script>
+</head>
+
+<body class="bg-gradient-primary">
+    <audio id="myAudio">
+        <source src="./songs/backgroundSound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.getElementById("myAudio").volume = 1;
+        document.getElementById("myAudio").play(); 
+    </script>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/WvRAPzFjydo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <div class="container" style="margin-top: 15%;">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Jackie!</h1>
+                                    </div>
+                                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        Play
+                                    </a>
+                                    <a href="" class="btn btn-secondary btn-user btn-block" data-bs-toggle="modal"
+                                        data-bs-target="#configurationModal">
+                                        Load 3D Model
+                                    </a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="configurationModal" tabindex="-1" aria-labelledby="configurationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="configurationModalLabel">Jackie</h2>
+                    <div class="modal-body">
+                        <img src="./img/fav2.png" />
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    Select the model to play:
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+
+                            <div id="drop-area">
+                                <form class="my-form">
+                                  <input type="file" id="fileElem" multiple accept="/*" onchange="handleFiles(this.files)">
+                                  <label class="button" for="fileElem">Select some files</label>
+                                </form>
+                              </div>
+                              
+                </div>
+                <a href="load3d.html" class="btn btn-primary btn-user btn-block">
+                    SaveChanges
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
